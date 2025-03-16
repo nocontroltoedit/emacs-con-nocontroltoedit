@@ -1,4 +1,21 @@
 body {
-    background-color: grey;
-    color: white;
+    background-color: #FAFAFA;
 }
+
+h1 {
+    color: #FF9800
+}
+
+#postamble {
+    margin: 'auto';
+    max-width: 60em;
+}
+
+
+/*
+#FF9800 - WARM ORANGE
+#2196F3 - VIBRANT BLUE
+#4CAF50 - FRESH GREEN
+#FAFAFA - ULTRA LIGHT GREY
+#333333 - DARK GREY
+*/

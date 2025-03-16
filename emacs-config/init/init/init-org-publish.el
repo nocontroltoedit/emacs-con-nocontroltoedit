@@ -95,7 +95,7 @@
     
     (format
      "<div id=\"modified_at\" class=\"content\">
-last updated on
+updated on
 <span class=\"file_modified_date\">%s</span>
 at
 <span class=\"file_modified_time\">%s</span>
@@ -114,7 +114,8 @@ at
 	       :section-numbers nil
 	       :html-preamble "
   <div id=\"site-header\">
-   <h1>Bienvenido</h1>
+   <h1>no-control-to-edit</h1>
+   <span id="title_desc">Practicando español: Emacs, mi editor favorito</span>
   <div>
    <ul>
    <li><a href=\"./index.html\">Home</a>
