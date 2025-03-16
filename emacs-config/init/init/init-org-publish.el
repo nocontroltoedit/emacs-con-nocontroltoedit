@@ -89,42 +89,42 @@
 
 (defun ncte-get-modification-time (file) 
   ""   
- (file-attribute-modification-time
-		      (file-attributes file)))
+  (file-attribute-modification-time
+   (file-attributes file)))
 
 (defun nocontroltoedit-github-footer (info)
   (let ((modification-time (ncte-get-modification-time (plist-get info :input-file))))
-	
-	(format
-	 "<div id=\"modified_at\" class=\"content\">
+    
+    (format
+     "<div id=\"modified_at\" class=\"content\">
 last updated on
 <span class=\"file_modified_date\">%s</span>
 at
 <span class=\"file_modified_time\">%s</span>
 .
 </div>" 
-	 (format-time-string "%d %m %Y" modification-time)
-	 (format-time-string "%H:%M:%S" modification-time))))
+     (format-time-string "%d %m %Y" modification-time)
+     (format-time-string "%H:%M:%S" modification-time))))
 
-	 (setq org-publish-project-alist nil)
-	 (add-to-list 'org-publish-project-alist
-		      `("nocontroltoedit-github-site"
-			:base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
-			:publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
-       			:publishing-function org-html-publish-to-html
-       			:html-postamble nocontroltoedit-github-footer
-			:headline-numbering nil
-			:section-numbers nil
-			:html-head ,ncte-html-head
-			:recursive t
-			:with-toc nil
-			))
+(setq org-publish-project-alist nil)
+(add-to-list 'org-publish-project-alist
+	     `("nocontroltoedit-github-site"
+	       :base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
+	       :publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
+       	       :publishing-function org-html-publish-to-html
+	       :headline-numbering nil
+	       :section-numbers nil
+	       :html-head ,ncte-html-head
+	       :recursive t
+	       :with-toc nil
+	       ))
 
 
-	 ;; :html-postamble  "<div idfooter><p>last modified: %C</p></footer>"
-	 ;; :with-author nil
-	 ;; :with-creator nil
-	 ;; :time-stamp-file nil
-	 (save-buffer)
-	 (org-publish-all t)
-	 (magit)
+;; :html-postamble nocontroltoedit-github-footer
+;; :html-postamble  "<div idfooter><p>last modified: %C</p></footer>"
+;; :with-author nil
+;; :with-creator nil
+;; :time-stamp-file nil
+(save-buffer)
+(org-publish-all t)
+(magit)
