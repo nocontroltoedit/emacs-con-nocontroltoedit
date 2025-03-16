@@ -1,0 +1,9 @@
+* Acabo de usar org-publish para generar html
+
+   ¡Qué flipa, tío!
+
+   M-x org-publish-current-project
+   
+* Bienvenido a mi Blog sobre emacs.
+
+Acepto correciones en mi uso de español.
