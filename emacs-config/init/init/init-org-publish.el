@@ -94,7 +94,7 @@
   (let ((modification-time (ncte-get-modification-time (plist-get info :input-file))))
     
     (format
-     "<div id=\"modified_at\" class=\"content\">
+     "<div id=\"modified-at\" class=\"content\">
 updated on
 <span class=\"file_modified_date\">%s</span>
 at

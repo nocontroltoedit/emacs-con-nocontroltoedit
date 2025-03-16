@@ -12,14 +12,14 @@ body {
 h1 {
     color: #FF9800;
     padding: 1em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
 }
 
 #title-desc {
     padding: 1em;
     padding-top: 0.2em;
     margin-left: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 
 #preamble {
@@ -35,7 +35,6 @@ h1 {
 }
 
 #content > div > h2 {
-	background-color: #eeeefc;
 	padding: 1em;
 	padding-left: 1em;
 	margin: 1em;
@@ -43,7 +42,11 @@ h1 {
 }
 
 .outline-text-2 {
+    
+	background-color: #eeeefc;
+  padding: 1em;
 }
+
 
 .status {
     max-width: 60em;
@@ -150,6 +153,12 @@ nav {
   .hamburger {
     display: block;
   }
+}
+
+#modified-at {
+    margin-top: 4em;
+    text-align: right;
+    color: #333333;
 }
 
 /*
