@@ -16,6 +16,6 @@
 		   :with-toc nil
 		   ))
 
-:with-author nil
-:with-creator nil
-:time-stamp-file nil
+;; :with-author nil
+;; :with-creator nil
+;; :time-stamp-file nil
