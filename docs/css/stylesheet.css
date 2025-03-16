@@ -21,16 +21,15 @@ h1 {
 }
 
 #preamble {
-    margin: 'auto';
+    margin: auto;
     max-width: 60em;
 }
 #postamble {
-    margin: 'auto';
+    margin: auto;
     max-width: 60em;
 }
 
 #content {
-    background-color: red;
 }
 
 .status {
