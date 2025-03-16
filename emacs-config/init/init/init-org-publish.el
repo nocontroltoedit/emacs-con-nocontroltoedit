@@ -80,8 +80,8 @@
 
 
 (defun nocontroltoedit-github-footer (info)
-  (format "<p>this file was create from : %s</p>"
-	  (plist-get info :input-file)))
+  (format "<p>last updated : %s</p>" "now"))
+;;	   (plist-get info :input-file)))
 
 (setq org-publish-project-alist nil)
 (add-to-list 'org-publish-project-alist
@@ -89,12 +89,13 @@
 		   :base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
 		   :publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
        		   :publishing-function org-html-publish-to-html
-		   :html-postamble  "<footer><p>last modified: %C</p></footer>"
+		   :html-postamble  "last modified: %C"
 		   :recursive t
 		   :with-toc nil
 		   ))
 
 
+;; :html-postamble  "<div idfooter><p>last modified: %C</p></footer>"
 ;;		   :html-postamble nocontroltoedit-github-footer
 ;; :with-author nil
 ;; :with-creator nil
