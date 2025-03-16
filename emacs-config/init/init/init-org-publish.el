@@ -1,9 +1,9 @@
 (use-package ox-publish)
-
+(use-package htmlize)
 
 ;; (:export-options :back-end :translate-alist :exported-data
 ;; 		 :input-buffer :input-file :html-doctype
-;; 		 :html-container :html-content-class :description
+;; 		 :html-contaiyner :html-content-class :description
 ;; 		 :keywords :html-html5-fancy :html-link-use-abs-url
 ;; 		 :html-link-home :html-link-up :html-mathjax
 ;; 		 :html-equation-reference-format :html-postamble
@@ -80,10 +80,8 @@
 
 (setq ncte-html-head
       "
-<meta http-equiv=\"cache-control\" content=\"max-age=0\" />
-<meta http-equiv=\"cache-control\" content=\"no-cache\" />
+<meta http-equiv=\"cache-control\" content=\"max-age=0, no-store, no-cache, must-revalidate, proxy-revalidate\" />
 <meta http-equiv=\"expires\" content=\"0\" />
-<meta http-equiv=\"expires\" content=\"Tue, 01 Jan 1980 1:00:00 GMT\" />
 <meta http-equiv=\"pragma\" content=\"no-cache\" />
 ")
 
@@ -114,8 +112,10 @@ at
        	       :publishing-function org-html-publish-to-html
 	       :headline-numbering nil
 	       :section-numbers nil
+               :html-postamble nocontroltoedit-github-footer
 	       :html-head ,ncte-html-head
 	       :recursive t
+	       :style "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" />"
 	       :with-toc nil
 	       ))
 
