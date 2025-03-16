@@ -1,7 +1,12 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     background-color: #FAFAFA;
-    max-width: 60em;
-    margin: 'auto';
 }
 
 h1 {
@@ -15,15 +20,22 @@ h1 {
     padding-top: 0.2em;
 }
 
+#preamble {
+    margin: 'auto';
+    max-width: 60em;
+}
 #postamble {
     margin: 'auto';
     max-width: 60em;
 }
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+#content {
+    background-color: red;
+}
+
+.status {
+    max-width: 60em;
+    margin: 'auto';
 }
 
 /* Navbar Container */
