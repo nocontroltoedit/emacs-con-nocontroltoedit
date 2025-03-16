@@ -126,7 +126,7 @@ at
                :html-postamble nocontroltoedit-github-footer
 	       :html-head ,ncte-html-head
 	       :recursive t
-	       :style "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" />"
+	       :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" />"
 	       :with-toc nil
 	       ))
 
