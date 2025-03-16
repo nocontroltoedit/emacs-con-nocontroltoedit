@@ -120,7 +120,7 @@ at
 <div class=\"navbar-container\">
    <ul class=\"navbar-links\">
    <li><a href=\"./index.html\" class=\"navbar-link\">Home</a>
-   <li><a href=\"./about.html\ class=\"navbar-link\">About</a>
+   <li><a href=\"./about.html\" class=\"navbar-link\">About</a>
    </ul>
     <button class=\"hamburger\" aria-label=\"Toggle navigation\">
       <span class=\"hamburger-icon\"></span>
