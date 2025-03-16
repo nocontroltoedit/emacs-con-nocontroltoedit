@@ -1,9 +1,17 @@
 body {
     background-color: #FAFAFA;
+    max-width: 60em
+    margin: 'auto;'
 }
 
 h1 {
-    color: #FF9800
+    color: #FF9800;
+    padding: 1em;
+    padding-bottom: 0.5em;
+}
+
+#title-desc {
+    padding-bottom: 1em;
 }
 
 #postamble {
@@ -27,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -53,7 +61,7 @@ nav {
 }
 
 .navbar-link:hover {
-  color: #00bcd4;
+  color: #ddd;
 }
 
 /* Hamburger menu for mobile */
