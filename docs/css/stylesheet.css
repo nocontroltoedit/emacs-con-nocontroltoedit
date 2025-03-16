@@ -18,6 +18,8 @@ h1 {
 #title-desc {
     padding: 1em;
     padding-top: 0.2em;
+    margin-left: 2em;
+    margin-bottom: 1em;
 }
 
 #preamble {
@@ -32,6 +34,11 @@ h1 {
 #content {
 }
 
+.outline-text-2 {
+    margin-top: 2em;
+    background-color: #EEE;
+}
+
 .status {
     max-width: 60em;
     margin: 'auto';
@@ -41,6 +48,7 @@ h1 {
 nav {
   background-color: #333;
   padding: 1rem;
+  margin: 0.5em;
 }
 
 .navbar-container {
