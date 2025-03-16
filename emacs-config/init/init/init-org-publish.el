@@ -112,6 +112,17 @@ at
        	       :publishing-function org-html-publish-to-html
 	       :headline-numbering nil
 	       :section-numbers nil
+	       :html-preamble "
+  <div id=\"site-header\">
+   <h1>Bienvenido</h1>
+  <div>
+   <ul>
+   <li><a href=\"http://www.google.com\">Google </a>
+   <li><a href=\"http://www.google.com\">Google Again</a>
+   </ul>
+   </div>
+</div>
+"
                :html-postamble nocontroltoedit-github-footer
 	       :html-head ,ncte-html-head
 	       :recursive t
