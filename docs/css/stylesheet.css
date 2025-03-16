@@ -34,9 +34,12 @@ h1 {
 #content {
 }
 
-#content > h2 {
-    margin-top: 2em;
-    background-color: #EEE;
+#content > div > h2 {
+	background-color: #eeeefc;
+	padding: 1em;
+	padding-left: 1em;
+	margin: 1em;
+	margin-left: 0;
 }
 
 .outline-text-2 {
