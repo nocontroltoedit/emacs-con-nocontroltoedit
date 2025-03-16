@@ -80,8 +80,11 @@
 
 
 (defun nocontroltoedit-github-footer (info)
-  (format "<p>last updated : %s</p>" "now"))
-;;	   (plist-get info :input-file)))
+  (format "<span class=\"label\">last updated:</span><span class=\"file_modified_time\">%s</span>" 
+(format-time-string "%d %m %Y %H:%M:%S"
+(file-attribute-modification-time
+(file-attributes 
+(plist-get info :input-file))))))
 
 (setq org-publish-project-alist nil)
 (add-to-list 'org-publish-project-alist
@@ -89,7 +92,7 @@
 		   :base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
 		   :publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
        		   :publishing-function org-html-publish-to-html
-		   :html-postamble  "last modified: %C"
+		   :html-postamble nocontroltoedit-github-footer
 		   :recursive t
 		   :with-toc nil
 		   ))
