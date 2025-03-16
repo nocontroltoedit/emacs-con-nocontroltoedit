@@ -34,9 +34,12 @@ h1 {
 #content {
 }
 
-.outline-text-2 {
+#content > h2 {
     margin-top: 2em;
     background-color: #EEE;
+}
+
+.outline-text-2 {
 }
 
 .status {
