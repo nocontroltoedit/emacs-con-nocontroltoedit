@@ -80,7 +80,7 @@
 
 
 (defun nocontroltoedit-github-footer (info)
-  (format "<span class=\"label\">last updated:</span><span class=\"file_modified_time\">%s</span>" 
+  (format "<div class=\"content\"><span class=\"label\">last updated:</span><span class=\"file_modified_time\">%s</span></div>" 
 (format-time-string "%d %m %Y %H:%M:%S"
 (file-attribute-modification-time
 (file-attributes 
