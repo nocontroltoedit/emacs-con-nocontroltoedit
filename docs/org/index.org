@@ -19,7 +19,11 @@
 #+begin_src emacs-lisp 
   M-x org-publish-current-project
 #+end_src
-   
+
+gotcha: files not changed but config has, it will not update
+
+C-u M-x org-publish-current-project
+
 * Bienvenido a mi Blog sobre emacs.
 
 Acepto correciones en mi uso de español.
