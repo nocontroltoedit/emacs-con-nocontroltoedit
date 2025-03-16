@@ -117,8 +117,8 @@ at
    <h1>Bienvenido</h1>
   <div>
    <ul>
-   <li><a href=\"http://www.google.com\">Google </a>
-   <li><a href=\"http://www.google.com\">Google Again</a>
+   <li><a href=\"./index.html\">Home</a>
+   <li><a href=\"./about.html\">About</a>
    </ul>
    </div>
 </div>
@@ -128,7 +128,7 @@ at
 	       :recursive t
 	       :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" />"
 	       :with-toc nil
-	       ))
+	       ))			;
 
 
 ;; :html-postamble nocontroltoedit-github-footer
