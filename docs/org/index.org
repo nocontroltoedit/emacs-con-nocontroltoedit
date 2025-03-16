@@ -1,3 +1,9 @@
+* Tengo un amigo hispano que habla de emacs
+
+   Sebastián Monía y yo intercambiamos screencasts de nosotros usando emacs.
+
+   Su sitio web es [[https://site.sebasmonia.com/]] y aquí es su [[https://github.com/sebasmonia][github]]
+
 * Acabo de usar org-publish para generar html
 
 ¡Qué flipa, tío!
