@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-16 Sun 17:09 -->
+<!-- 2025-03-16 Sun 17:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -215,6 +215,21 @@
 <p>
 M-x org-publish-current-project
 </p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp-mode">(use-package ox-publish)
+
+(setq nocontroltoedit-github-footer "nocontroltoedit 2025")
+
+(add-to-list 'org-publish-project-alist
+             '("nocontroltoedit-github-site"
+                   :base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
+                   :publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
+                   :publishing-function org-html-publish-to-html
+                   :html-postamble nocontroltoedit-github-footer
+                   :recursive t))
+</pre>
+</div>
 </div>
 </div>
 <div id="outline-container-org09c20ad" class="outline-2">
