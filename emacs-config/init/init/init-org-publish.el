@@ -115,14 +115,19 @@ at
 	       :html-preamble "
   <div id=\"site-header\">
    <h1>no-control-to-edit</h1>
-   <span id="title_desc">Practicando español: Emacs, mi editor favorito</span>
-  <div>
-   <ul>
-   <li><a href=\"./index.html\">Home</a>
-   <li><a href=\"./about.html\">About</a>
+   <span id=\"title_desc\">Practicando español: Emacs, mi editor favorito</span>
+<nav>
+<div class=\"navbar-container\">
+   <ul class=\"navbar-links\">
+   <li><a href=\"./index.html\" class=\"navbar-link\">Home</a>
+   <li><a href=\"./about.html\ class=\"navbar-link\">About</a>
    </ul>
+    <button class=\"hamburger\" aria-label=\"Toggle navigation\">
+      <span class=\"hamburger-icon\"></span>
+    </button>
    </div>
 </div>
+</nav>
 "
                :html-postamble nocontroltoedit-github-footer
 	       :html-head ,ncte-html-head
