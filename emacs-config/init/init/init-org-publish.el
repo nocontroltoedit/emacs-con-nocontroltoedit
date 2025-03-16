@@ -78,8 +78,8 @@
 ;; 		 :headline-offset :headline-numbering :id-alist
 ;; 		 :citations :internal-references)
 
-(setq ncte-html-head
-      "
+(setq ncte-head-extra
+      "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" /> 
 <meta http-equiv=\"cache-control\" content=\"max-age=0, no-store, no-cache, must-revalidate, proxy-revalidate\" />
 <meta http-equiv=\"expires\" content=\"0\" />
 <meta http-equiv=\"pragma\" content=\"no-cache\" />
@@ -130,9 +130,8 @@ at
 </nav>
 "
                :html-postamble nocontroltoedit-github-footer
-	       :html-head ,ncte-html-head
 	       :recursive t
-	       :html-head-extra "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" />"
+	       :html-head-extra ,ncte-head-extra
 	       :with-toc nil
 	       ))			;
 
