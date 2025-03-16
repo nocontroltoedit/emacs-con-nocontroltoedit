@@ -1,6 +1,7 @@
 (use-package ox-publish)
 
-(setq nocontroltoedit-github-footer "nocontroltoedit 2025")
+(setq nocontroltoedit-github-footer
+      "updated on %d")
 
 
 
@@ -12,7 +13,9 @@
        		   :publishing-function org-html-publish-to-html
 		   :html-postamble ,nocontroltoedit-github-footer
 		   :recursive t
-		   :with-author nil
 		   :with-toc nil
-		   :with-creator nil
-		   :time-stamp-file nil))
+		   ))
+
+:with-author nil
+:with-creator nil
+:time-stamp-file nil
