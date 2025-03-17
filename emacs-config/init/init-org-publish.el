@@ -16,7 +16,7 @@
 </nav>
 ")
 
-(defun ncte-head-extra (&rest _args)
+(setq ncte-head-extra 
       "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" /> 
 <meta http-equiv=\"cache-control\" content=\"max-age=0, no-store, no-cache, must-revalidate, proxy-revalidate\" />
 <meta http-equiv=\"expires\" content=\"0\" />
@@ -53,7 +53,7 @@ at
 	       :html-preamble ncte-website-header	       
                :html-postamble nocontroltoedit-github-footer
 	       :recursive t
-	       :html-head-extra ncte-head-extra
+	       :html-head-extra ,ncte-head-extra
 	       :with-toc nil))			
 
 (setq org-export-preserve-breaks t)
@@ -61,7 +61,7 @@ at
 (defun org-publish-ncte () 
   (interactive)
   (let ((default-directory "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init"))
-    (load-file "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init/init-org-publish.el")
     (save-some-buffers)
+    (load-file "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init/init-org-publish.el")
     (org-publish-all t)
     (magit)))
