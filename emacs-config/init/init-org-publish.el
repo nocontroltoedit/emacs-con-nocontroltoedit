@@ -60,6 +60,7 @@ at
 (setq org-export-preserve-breaks t)
 
 (defun org-publish-ncte () 
+  (interactive)
   (let ((default-directory "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init"))
     (save-some-buffers)
     (org-publish-all t)
