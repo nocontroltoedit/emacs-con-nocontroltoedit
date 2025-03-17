@@ -11,6 +11,7 @@ body {
 }
 
 #preamble {
+    margin-top: 1rem;
     margin: auto;
     max-width: 60rem;
 }
@@ -29,7 +30,7 @@ h1 {
     padding: 1rem;
     padding-top: 0.2rem;
     margin-left: 2rem;
-    margin-bottom: 1.8rem;
+    margin-bottom: 3rem;
 }
 
 #preamble {
@@ -51,11 +52,10 @@ h1 {
 	margin-left: 0;
 }
 
-.outline-text-2 {
-    
+.outline-text-2 {    
 	background-color: #eeeefc;
 	padding: 1em;
-	padding-bottom: 2em;
+	padding-bottom: 3em;
 }
 
 
