@@ -8,8 +8,8 @@
 <nav class=\"navbar\">
 <div class=\"navbar-container\">
    <ul class=\"navbar-links\">
-   <li><a href=\"./index.html\" class=\"navbar-link\">Home</a>
-   <li><a href=\"./about.html\" class=\"navbar-link\">About</a>
+   <li><a href=\"./index.html\" class=\"navbar-link\">Inicio</a>
+   <li><a href=\"./about.html\" class=\"navbar-link\">Acerca De</a>
    </ul>
    </div>
 </div>
@@ -54,8 +54,7 @@ at
                :html-postamble nocontroltoedit-github-footer
 	       :recursive t
 	       :html-head-extra ,ncte-head-extra
-	       :with-toc nil
-	       ))			
+	       :with-toc nil))			
 
 (setq org-export-preserve-breaks t)
 

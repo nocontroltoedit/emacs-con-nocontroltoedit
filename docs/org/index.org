@@ -37,7 +37,8 @@
   M-x org-publish-current-project
 #+end_src
 
-*gotcha:* No actualiza cuando el config ha cambiado y los otros archivos no. 
+*advertencia:* No actualiza cuando el config ha cambiado y los otros
+archivos no. Usa este commando para forzar una actualización
 
 #+begin_src emacs-command
 C-u M-x org-publish-current-project
