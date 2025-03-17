@@ -55,13 +55,14 @@ at
 	       :recursive t
 	       :html-head-extra ,ncte-head-extra
 	       :with-toc nil
-	       ))			;
+	       ))			
 
 (setq org-export-preserve-breaks t)
 
 (defun org-publish-ncte () 
   (interactive)
   (let ((default-directory "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init"))
+    (load-file "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init/init-org-publish.el")
     (save-some-buffers)
     (org-publish-all t)
     (magit)))
