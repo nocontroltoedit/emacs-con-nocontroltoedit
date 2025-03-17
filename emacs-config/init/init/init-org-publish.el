@@ -121,7 +121,7 @@ at
    <ul class=\"navbar-links\">
    <li><a href=\"./index.html\" class=\"navbar-link\">Home</a>
    <li><a href=\"./about.html\" class=\"navbar-link\">About</a>
-   </ul>
+   </ul>b
    </div>
 </div>
 </nav>
