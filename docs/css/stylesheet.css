@@ -149,7 +149,10 @@ nav {
 
 /* Mobile View (Responsive Design) */
 @media (max-width: 768px) {
-    
+
+    h1 {
+	font-size: 1em;
+    }
   /* .navbar-links { */
   /*   display: none; */
   /*   position: absolute; */

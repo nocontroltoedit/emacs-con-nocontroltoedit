@@ -115,7 +115,7 @@ at
 	       :html-preamble "
   <div id=\"site-header\">
    <h1>no-control-to-edit</h1>
-   <span id=\"title-desc\">Practicando español: Emacs, mi editor favorito</span>
+   <div id=\"title-desc\">Practicando español: Emacs, mi editor favorito</div>
 <nav class=\"navbar\">
 <div class=\"navbar-container\">
    <ul class=\"navbar-links\">
