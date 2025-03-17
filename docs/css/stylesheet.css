@@ -10,9 +10,18 @@ body {
     background-color: #FAFAFA;
 }
 
+#preamble {
+    margin: auto;
+    max-width: 60rem;
+}
+#postamble {
+    margin: auto;
+    max-width: 60rem;
+}
+
 h1 {
     color: #FF9800;
-    padding: 1em;
+    padding: 1rem;
     padding-bottom: 0.3rem;
 }
 
@@ -57,11 +66,10 @@ h1 {
 
 /* Navbar Container */
 nav {
-border-radius: 0rem 0.3em 12em 0em;
-    background-color: #333;
+  border-radius: 0rem 0.3em 12em 0em;
+  background-color: #333;
   padding: 1rem;
-  padding-left: 0.2rem:
-  margin: 0rem;
+  margin: 0;
 }
 
 .navbar-container {
