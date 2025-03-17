@@ -1,5 +1,8 @@
 * about
 
-Hola, Soy *no-control-to-edit*. Aprendo español y he creado este sitio para practicar creando contenido en ese idioma. Voy a enfocarme en el tema de Emacs, mi editor favorito.
+Hola, Soy *no-control-to-edit*. Aprendo español y he creado este sitio
+para practicar creando contenido en ese idioma. Voy a enfocarme en el
+tema de Emacs, mi editor favorito.
+
 
 [[https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main][github: emacs-con-nocontroltoedit]]

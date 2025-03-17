@@ -1,12 +1,22 @@
+* Amigo español 2
+
+ Acabo de recibir una solicitud de amistad a través de mi página de
+ [[https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main][github]]. Hola Byron.
+
+
+
 * Tengo un amigo hispano que habla de emacs
 
-   Sebastián Monía y yo intercambiamos screencasts de nosotros usando emacs.
+   Sebastián Monía y yo intercambiamos screencasts de nosotros usando
+   emacs.
 
+   
    Su sitio web es [[https://site.sebasmonia.com/]] y aquí es su [[https://github.com/sebasmonia][github]]
 
+   
 * Acabo de usar org-publish para generar html
 
-¡Qué flipa, tío!
+¡Qué flipa, tío! Puedo publicar una página web con poca configuración
 
 #+begin_src emacs-lisp
   (use-package ox-publish)
@@ -22,14 +32,21 @@
   	       :recursive t))
 #+end_src
 
-#+begin_src emacs-lisp 
+#+begin_src emacs-command
   M-x org-publish-current-project
 #+end_src
 
-gotcha: files not changed but config has, it will not update
+*gotcha:* No actualiza cuando el config ha cambiado y los otros archivos no. 
 
+#+begin_src emacs-command
 C-u M-x org-publish-current-project
+#+end_src
 
-* Bienvenido a mi Blog sobre emacs.
 
-Acepto correciones en mi uso de español.
+* Bienvenido a mi blog sobre emacs.
+
+[[./about.org][Acepto]] correciones en mi uso de español.
+
+
+
+
