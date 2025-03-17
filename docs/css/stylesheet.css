@@ -147,25 +147,26 @@ nav {
 
 /* Mobile View (Responsive Design) */
 @media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
-    gap: 1.5em;
-    padding: 1em;
-  }
+    
+  /* .navbar-links { */
+  /*   display: none; */
+  /*   position: absolute; */
+  /*   top: 60px; */
+  /*   left: 0; */
+  /*   right: 0; */
+  /*   background-color: #333; */
+  /*   flex-direction: column; */
+  /*   gap: 1.5em; */
+  /*   padding: 1em; */
+  /* } */
 
-  .navbar-links.active {
-    display: flex;
-  }
+  /* .navbar-links.active { */
+  /*   display: flex; */
+  /* } */
 
-  .hamburger {
-    display: block;
-  }
+  /* .hamburger { */
+  /*   display: block; */
+  /* } */
 }
 
 #modified-at {
