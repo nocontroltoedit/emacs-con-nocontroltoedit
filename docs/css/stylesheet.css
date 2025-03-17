@@ -29,9 +29,7 @@ h1 {
 
 #title-desc {
     padding: 1em;
-    padding-top: 0.2em;
-    margin-left: 0em;
-    margin-bottom: 3em;
+    padding-bottom: 1em;
 }
 
 #preamble {
@@ -151,7 +149,7 @@ nav {
 @media (max-width: 768px) {
 
     h1 {
-	font-size: 1em;
+	font-size: 0.5em;
     }
   /* .navbar-links { */
   /*   display: none; */
