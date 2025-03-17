@@ -132,6 +132,7 @@ at
 	       :with-toc nil
 	       ))			;
 
+(setq org-export-preserve-breaks t)
 
 ;; :html-postamble nocontroltoedit-github-footer
 ;; :html-postamble  "<div idfooter><p>last modified: %C</p></footer>"

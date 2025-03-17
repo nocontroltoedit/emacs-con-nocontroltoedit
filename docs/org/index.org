@@ -1,5 +1,6 @@
 * Amigo español 2
 
+
  Acabo de recibir una solicitud de amistad a través de mi página de
  [[https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main][github]]. Hola Byron.
 
@@ -11,7 +12,7 @@
    emacs.
 
    
-   Su sitio web es [[https://site.sebasmonia.com/]] y aquí es su [[https://github.com/sebasmonia][github]]
+   Su sitio web es [[https://site.sebasmonia.com/]] y aquí es su [[https://github.com/sebasmonia][github]].
 
    
 * Acabo de usar org-publish para generar html
