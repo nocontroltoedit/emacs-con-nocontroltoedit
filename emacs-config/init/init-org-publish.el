@@ -1,8 +1,8 @@
 (use-package ox-publish)
 (use-package htmlize)
 
-(setq ncte-website-header "
-  <div id=\"site-header\">
+(defun ncte-website-header (info)
+"<div id=\"site-header\">
    <h1>no-control-to-edit</h1>
    <div id=\"title-desc\">Practicando español: Emacs, mi editor favorito</div>
 <nav class=\"navbar\">
@@ -16,7 +16,7 @@
 </nav>
 ")
 
-(setq ncte-head-extra
+(defun ncte-head-extra (&rest _args)
       "<link rel=\"stylesheet\" type=\"text/css\" href=\"./css/stylesheet.css\" /> 
 <meta http-equiv=\"cache-control\" content=\"max-age=0, no-store, no-cache, must-revalidate, proxy-revalidate\" />
 <meta http-equiv=\"expires\" content=\"0\" />
@@ -50,10 +50,10 @@ at
        	       :publishing-function org-html-publish-to-html
 	       :headline-numbering nil
 	       :section-numbers nil
-	       :html-preamble ,ncte-website-header	       
+	       :html-preamble ncte-website-header	       
                :html-postamble nocontroltoedit-github-footer
 	       :recursive t
-	       :html-head-extra ,ncte-head-extra
+	       :html-head-extra ncte-head-extra
 	       :with-toc nil))			
 
 (setq org-export-preserve-breaks t)
