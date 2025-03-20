@@ -1,3 +1,15 @@
+* Voy a usar evil
+
+Prefiero los atajos de Vim. Evil provee funcionalidad útil que está disponible en el editor Vim.
+
+#+begin_src elisp
+  (use-package evil
+    :ensure t
+    :config
+    (evil-mode 1))
+#+end_src
+
+
 * Amigo español número 2
 
 

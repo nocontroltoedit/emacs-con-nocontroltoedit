@@ -4,7 +4,7 @@ Hola, Soy *no-control-to-edit*.
 
 
 Aprendo español y he creado este sitio para practicar creando
-contenido en ese idioma. Voy a enfocarme en el tema de Emacs, mi
+contenido en este idioma. Voy a enfocarme en el tema de Emacs, mi
 editor favorito.
 
 

@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-17 Mon 09:37 -->
+<!-- 2025-03-20 Thu 21:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="author" content="No Control To Edit" />
+<meta name="author" content="no-control" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -214,18 +214,34 @@
 </nav>
 </div>
 <div id="content" class="content">
-<div id="outline-container-org2853e4d" class="outline-2">
-<h2 id="org2853e4d">Amigo español número 2</h2>
-<div class="outline-text-2" id="text-org2853e4d">
+<div id="outline-container-org7b4ade3" class="outline-2">
+<h2 id="org7b4ade3">Voy a usar evil</h2>
+<div class="outline-text-2" id="text-org7b4ade3">
+<p>
+Prefiero los atajos de Vim. Evil provee funcionalidad útil que está disponible en el editor Vim.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-elisp">(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org54a7b15" class="outline-2">
+<h2 id="org54a7b15">Amigo español número 2</h2>
+<div class="outline-text-2" id="text-org54a7b15">
 <p>
 Acabo de recibir una solicitud de amistad a través de mi página de<br />
 <a href="https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main">github</a>. Hola Byron.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org00cc3b5" class="outline-2">
-<h2 id="org00cc3b5">Tengo un amigo hispano que habla de emacs</h2>
-<div class="outline-text-2" id="text-org00cc3b5">
+<div id="outline-container-org9e0667f" class="outline-2">
+<h2 id="org9e0667f">Tengo un amigo hispano que habla de emacs</h2>
+<div class="outline-text-2" id="text-org9e0667f">
 <p>
 Sebastián Monía y yo intercambiamos screencasts de nosotros usando<br />
 emacs.<br />
@@ -237,25 +253,25 @@ Su sitio web es <a href="https://site.sebasmonia.com/">https://site.sebasmonia.c
 </p>
 </div>
 </div>
-<div id="outline-container-org4981784" class="outline-2">
-<h2 id="org4981784">Acabo de usar org-publish para generar html</h2>
-<div class="outline-text-2" id="text-org4981784">
+<div id="outline-container-orge62b4f3" class="outline-2">
+<h2 id="orge62b4f3">Acabo de usar org-publish para generar html</h2>
+<div class="outline-text-2" id="text-orge62b4f3">
 <p>
 ¡Qué flipa, tío! Puedo publicar una página web con poca configuración<br />
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">use-package</span> ox-publish)
+<pre class="src src-emacs-lisp">(use-package ox-publish)
 
-(<span style="color: #0000FF; font-weight: bold;">setq</span> nocontroltoedit-github-footer <span style="color: #008000;">"nocontroltoedit 2025"</span>)
+(setq nocontroltoedit-github-footer "nocontroltoedit 2025")
 
 (add-to-list 'org-publish-project-alist
-             '(<span style="color: #008000;">"nocontroltoedit-github-site"</span>
-               <span style="color: #006FE0;">:base-directory</span> <span style="color: #008000;">"~/wd-x1/emacs-con-nocontroltoedit/docs/org"</span>
-               <span style="color: #006FE0;">:publishing-directory</span> <span style="color: #008000;">"~/wd-x1/emacs-con-nocontroltoedit/docs"</span>
-               <span style="color: #006FE0;">:publishing-function</span> org-html-publish-to-html
-               <span style="color: #006FE0;">:html-postamble</span> nocontroltoedit-github-footer
-               <span style="color: #006FE0;">:recursive</span> t))
+             '("nocontroltoedit-github-site"
+               :base-directory "~/wd-x1/emacs-con-nocontroltoedit/docs/org"
+               :publishing-directory "~/wd-x1/emacs-con-nocontroltoedit/docs"
+               :publishing-function org-html-publish-to-html
+               :html-postamble nocontroltoedit-github-footer
+               :recursive t))
 </pre>
 </div>
 
@@ -275,9 +291,9 @@ archivos no. Usa este commando para forzar una actualización<br />
 </div>
 </div>
 </div>
-<div id="outline-container-orga3c9630" class="outline-2">
-<h2 id="orga3c9630">Bienvenido a mi blog sobre emacs.</h2>
-<div class="outline-text-2" id="text-orga3c9630">
+<div id="outline-container-orge2800e3" class="outline-2">
+<h2 id="orge2800e3">Bienvenido a mi blog sobre emacs.</h2>
+<div class="outline-text-2" id="text-orge2800e3">
 <p>
 <a href="./about.html">Acepto</a> correciones en mi uso de español.<br />
 </p>
@@ -287,9 +303,9 @@ archivos no. Usa este commando para forzar una actualización<br />
 <div id="postamble" class="status">
 <div id="modified-at" class="content">
 updated on
-<span class="file_modified_date">17 03 2025</span>
+<span class="file_modified_date">20 03 2025</span>
 at
-<span class="file_modified_time">09:25:49</span>
+<span class="file_modified_time">21:53:04</span>
 .
 </div>
 </div>
