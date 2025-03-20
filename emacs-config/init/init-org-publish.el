@@ -65,3 +65,5 @@ at
     (load-file "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init/init-org-publish.el")
     (org-publish-all t)
     (magit)))
+
+(provide 'init-org-publish)
