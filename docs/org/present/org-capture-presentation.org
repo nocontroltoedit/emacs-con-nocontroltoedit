@@ -1,4 +1,4 @@
-#title: Org Capture Presentation* org-capture
+#title: Org Capture Presentation
 
 * Sobre org capture
 
@@ -12,8 +12,8 @@ hacerlo en ese momento.
 org-cature: built-in
 emacs: 31.0.50
 os: Linux Mint Debian Edition 6.1
-fecha: 22 March 2022
-author: no-control-to-edit* Configuar una plantilla de captura (template)
+fecha: 23 March 2025
+author: no-control-to-edit
 
 * Configurar una plantilla de captura (template)
 
@@ -27,9 +27,9 @@ author: no-control-to-edit* Configuar una plantilla de captura (template)
 
 
    Manual de plantillas - Las varias opciones
-   https://orgmode.org/manual/Template-elements.html* Ejemplo de datos de plantilla
+   https://orgmode.org/manual/Template-elements.html
 
-* Ejemplo de una plantilla
+* Ejemplo de datos de plantilla
    
 #+begin_src emacs-lisp
        ("Yak Shaving en Emacs"
