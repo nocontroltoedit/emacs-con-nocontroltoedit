@@ -1,3 +1,21 @@
+* Emacs - No hay función borrar-este-archivo
+
+  Es mejor usar dired para:
+    - borrar-este-archivo
+    - renombrar-este-archivo
+    - copiar-este-archivo
+
+  C-x C-j  Abre editor de directorios y archivos  (dired-jump)
+  R - renombrar archivo  (dired-do-rename)
+  > nombre-nuevo
+  RET
+  q - escapar dired  (quit-window)
+
+  Aunque mi modo favorito es
+
+  C-x C-j (dired-jump)
+  M-x wdired-change-to-wdired-mode
+  
 * Voy a usar evil
 
 Prefiero los atajos de Vim. Evil provee funcionalidad útil que está disponible en el editor Vim.

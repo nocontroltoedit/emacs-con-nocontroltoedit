@@ -1,0 +1,65 @@
+* doom evil bindings
+
+[[https://github.com/doomemacs/doomemacs/blob/master/modules/editor/evil/config.el][evil doom setup]]
+
+* text objects
+
+targets.el
+https://github.com/noctuid/targets.el
+
+#+begin_src emacs-lisp :results silent
+  (use-package evil-textobj-anyblock
+  :defer t
+  :config
+  (setq evil-textobj-anyblock-blocks
+        '(("(" . ")")
+          ("{" . "}")
+          ("\\[" . "\\]")
+          ("<" . ">"))))
+#+end_src
+
+#+begin_src emacs-lisp
+  (define-key evil-inner-text-objects-map "b" 'evil-textobj-anyblock-inner-block)
+  (define-key evil-outer-text-objects-map "b" 'evil-textobj-anyblock-a-block)
+#+end_src
+
+#+begin_src emacs-lisp
+  (define-key evil-motion-state-map "b" 'evil-textobj-anyblock-forward-open-block-start)
+#+end_src
+
+github [[https://github.com/noctuid/evil-textobj-anyblock?tab=readme-ov-file][evil-textobj-anyblock.el]]
+
+#+begin_src emacs-lisp
+  (evil-define-text-object my-evil-textobj-anyblock-inner-quote
+  (count &optional beg end type)
+  "Select the closest outer quote."
+  (let ((evil-textobj-anyblock-blocks
+         '(("'" . "'")
+           ("\"" . "\"")
+           ("`" . "'")
+           ("“" . "”"))))
+    (evil-textobj-anyblock--make-textobj beg end type count nil)))
+
+(evil-define-text-object my-evil-textobj-anyblock-a-quote
+  (count &optional beg end type)
+  "Select the closest outer quote."
+  (let ((evil-textobj-anyblock-blocks
+         '(("'" . "'")
+           ("\"" . "\"")
+           ("`" . "'")
+           ("“" . "”"))))
+    (evil-textobj-anyblock--make-textobj beg end type count t)))
+
+(define-key evil-inner-text-objects-map "q" 'my-evil-textobj-anyblock-inner-quote)
+(define-key evil-outer-text-objects-map "q" 'my-evil-textobj-anyblock-a-quote)
+#+end_src
+
+
+* Cómo la gente usa evil?
+
+  https://github.com/jbranso/.emacs.d/blob/master/lisp/init-evil.el
+
+
+* Investigar como otros usarios usan evil
+
+  Voy a mirar [[https://blog.aaronbieber.com/2016/01/23/living-in-evil.html][Viviendo en emacs (EN) por Aaron Bieber]] cuando tengo tiempo.

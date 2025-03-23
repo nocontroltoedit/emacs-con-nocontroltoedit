@@ -1,4 +1,5 @@
-(use-package ox-publish)
+(use-package ox-publish
+  :ensure nil)
 (use-package htmlize)
 
 (defun ncte-website-header (info)
@@ -58,7 +59,11 @@ at
 
 (setq org-export-preserve-breaks t)
 
-(defun org-publish-ncte () 
+(defun org-publish-ncte ()
+  "Save buffers
+   Reload init-org-publish
+   Call org-publish-all - and force update even if files not changed
+   Open magit-status "
   (interactive)
   (let ((default-directory "~/wd-x1/emacs-con-nocontroltoedit/emacs-config/init"))
     (save-some-buffers)
