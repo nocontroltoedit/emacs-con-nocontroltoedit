@@ -4,14 +4,14 @@
 
 * Emacs - No hay función borrar-este-archivo
 
-  Es mejor usar dired para:
+Es mejor usar dired para:
     - borrar archivo actual
     - renombrar archivo actual
     - copiar archivo actual
 
-  Ejemplo de renombrar archivo usando dired   
+Ejemplo de renombrar archivo usando dired   
 
-#+begin_quote 
+#+begin_src  
   ;; Abrir el editor de directorios y archivos   (dired-jump)
   C-x C-j
 
@@ -25,11 +25,11 @@
 
   ;; Cerrar el editor de directorios y archivos   (quit-window)
   q
-#+end_quote
+#+end_src
 
-    Aunque mi modo favorito es
+Aunque mi modo favorito es
 
- #+begin_quote
+ #+begin_src quote
   ;; Saltar a dired, con el foco en el archivo actual
   C-x C-j                              (dired-jump)
 
@@ -43,7 +43,7 @@
 
   ;; Deshacer los cambios y salir
   C-c C-k                              (wdired-abort-changes)
- #+end_quote
+ #+end_src
   
 * Voy a usar evil
 
