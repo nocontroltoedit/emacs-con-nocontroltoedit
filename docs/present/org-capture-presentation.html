@@ -214,170 +214,242 @@
 </nav>
 </div>
 <div id="content" class="content">
-<div id="outline-container-orga8950e3" class="outline-2">
-<h2 id="orga8950e3">Org-capture</h2>
-<div class="outline-text-2" id="text-orga8950e3">
 <p>
-<a href="https://youtu.be/9z0-sZzXKDw?si=llRxmRIxOi0VOpbF">youtube - org-capture de emacs en español</a><br />
+#title: Org Capture Presentation<br />
+</p>
+
+
+
+
+<p>
+emacs: 31.0.50<br />
+os: Linux Mint Debian Edition 6.1<br />
+fecha: 23 March 2025<br />
+author: no-control-to-edit<br />
+</p>
+<div id="outline-container-orgf176449" class="outline-2">
+<h2 id="orgf176449">Capturar una nota rápidamente</h2>
+<div class="outline-text-2" id="text-orgf176449">
+<p>
+Esta libraria provee una manera de grabar una nota, con la mínima<br />
+interrupción del flujo.<br />
+</p>
+
+<p>
+Lo uso para notar cosas que me gustaría mejorar en emacs, cuando no<br />
+puedo hacerlo en el momento.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgd805dd0" class="outline-2">
-<h2 id="orgd805dd0">Emacs - No hay función borrar-este-archivo</h2>
-<div class="outline-text-2" id="text-orgd805dd0">
+<div id="outline-container-org316f656" class="outline-2">
+<h2 id="org316f656">Configurar una plantilla de captura (template)</h2>
+<div class="outline-text-2" id="text-org316f656">
 <p>
-Es mejor usar dired para:<br />
-</p>
-<ul class="org-ul">
-<li>borrar archivo actual<br /></li>
-<li>renombrar archivo actual<br /></li>
-<li>copiar archivo actual<br /></li>
-</ul>
-
-<p>
-Ejemplo de renombrar archivo usando dired<br />
+Para cada tipo de captura tienes que crear una plantilla que<br />
+contiene la siguiente infomación.<br />
 </p>
 
-<blockquote>
-<p>
-;; Abrir el editor de directorios y archivos   (dired-jump)<br />
-C-x C-j<br />
-</p>
+<ol class="org-ol">
+<li>Una descripción de la plantilla<br /></li>
+<li>Tipo de entrada<br />
+'entry' crea un heading (titualar) de org-mode<br /></li>
+<li>Datos usado para ubicar la entrada<br /></li>
+<li>Cadena de formato por la entrada<br /></li>
+</ol>
 
 <p>
-;; Renombrar el archivo bajo cursor            (dired-do-rename)<br />
-R<br />
+Manual de plantillas - Las varias opciones<br />
+<a href="https://orgmode.org/manual/Template-elements.html">https://orgmode.org/manual/Template-elements.html</a><br />
 </p>
-
-<p>
-;; Entra un nobmre nuevo<br />
-</p>
-
-<p>
-;; Aceptar los cambios<br />
-RET<br />
-</p>
-
-<p>
-;; Cerrar el editor de directorios y archivos   (quit-window)<br />
-q<br />
-</p>
-</blockquote>
-
-<p>
-Aunque mi modo favorito es<br />
-</p>
-
-<blockquote>
-<p>
-;; Saltar a dired, con el foco en el archivo actual<br />
-C-x C-j                              (dired-jump)<br />
-</p>
-
-<p>
-;; Hacer dired editable<br />
-M-x wdired-change-to-wdired-mode<br />
-</p>
-
-<p>
-;; editar dired como era un archivo de texto<br />
-</p>
-
-<p>
-;; Confirmar los cambios y salir<br />
-C-c C-c                              (wdired-finish-edit)<br />
-</p>
-
-<p>
-;; Deshacer los cambios y salir<br />
-C-c C-k                              (wdired-abort-changes)<br />
-</p>
-</blockquote>
 </div>
 </div>
-<div id="outline-container-orgb6f5578" class="outline-2">
-<h2 id="orgb6f5578">Voy a usar evil</h2>
-<div class="outline-text-2" id="text-orgb6f5578">
-<p>
-Prefiero los atajos de Vim. Evil provee funcionalidad útil que está disponible en el editor Vim.<br />
-</p>
-
+<div id="outline-container-org5b9cffd" class="outline-2">
+<h2 id="org5b9cffd">Ejemplo de una plantilla</h2>
+<div class="outline-text-2" id="text-org5b9cffd">
 <div class="org-src-container">
-<pre class="src src-elisp">(<span style="color: #0000FF; font-weight: bold;">use-package</span> evil
-  <span style="color: #006FE0;">:ensure</span> t
-  <span style="color: #006FE0;">:config</span>
-  (evil-mode 1))
+<pre class="src src-emacs-lisp">(<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+        entry
+        (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+        <span style="color: #008000;">"* %?"</span>)
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org001b59f" class="outline-2">
-<h2 id="org001b59f">Amigo español número 2</h2>
-<div class="outline-text-2" id="text-org001b59f">
-<p>
-Acabo de recibir una solicitud de amistad a través de mi página de<br />
-<a href="https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main">github</a>. Hola Byron.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-org80d3217" class="outline-2">
-<h2 id="org80d3217">Tengo un amigo hispano que habla de emacs</h2>
-<div class="outline-text-2" id="text-org80d3217">
-<p>
-Sebastián Monía y yo intercambiamos screencasts de nosotros usando<br />
-emacs.<br />
-</p>
-
-
-<p>
-Su sitio web es <a href="https://site.sebasmonia.com/">https://site.sebasmonia.com/</a> y aquí es su <a href="https://github.com/sebasmonia">github</a>.<br />
-</p>
-</div>
-</div>
-<div id="outline-container-orgf1c871d" class="outline-2">
-<h2 id="orgf1c871d">Acabo de usar org-publish para generar html</h2>
-<div class="outline-text-2" id="text-orgf1c871d">
-<p>
-¡Qué flipa, tío! Puedo publicar una página web con poca configuración<br />
-</p>
-
+<div id="outline-container-orgc0379e5" class="outline-2">
+<h2 id="orgc0379e5">Asociar plantilla con una letra</h2>
+<div class="outline-text-2" id="text-orgc0379e5">
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">use-package</span> ox-publish)
-
-(<span style="color: #0000FF; font-weight: bold;">setq</span> nocontroltoedit-github-footer <span style="color: #008000;">"nocontroltoedit 2025"</span>)
-
-(add-to-list 'org-publish-project-alist
-             '(<span style="color: #008000;">"nocontroltoedit-github-site"</span>
-               <span style="color: #006FE0;">:base-directory</span> <span style="color: #008000;">"~/wd-x1/emacs-con-nocontroltoedit/docs/org"</span>
-               <span style="color: #006FE0;">:publishing-directory</span> <span style="color: #008000;">"~/wd-x1/emacs-con-nocontroltoedit/docs"</span>
-               <span style="color: #006FE0;">:publishing-function</span> org-html-publish-to-html
-               <span style="color: #006FE0;">:html-postamble</span> nocontroltoedit-github-footer
-               <span style="color: #006FE0;">:recursive</span> t))
-</pre>
-</div>
-
-<div class="org-src-container">
-<pre class="src src-emacs-command">M-x org-publish-current-project
-</pre>
-</div>
-
-<p>
-<b>advertencia:</b> No actualiza cuando el config ha cambiado y los otros<br />
-archivos no. Usa este commando para forzar una actualización<br />
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-command">C-u M-x org-publish-current-project
+<pre class="src src-emacs-lisp">(<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+        entry
+        (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+        <span style="color: #008000;">"* %?"</span>))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge5e27ef" class="outline-2">
-<h2 id="orge5e27ef">Bienvenido a mi blog sobre emacs.</h2>
-<div class="outline-text-2" id="text-orge5e27ef">
+<div id="outline-container-org4e00d57" class="outline-2">
+<h2 id="org4e00d57">Ańadir la plantilla a la lista de plantillas</h2>
+<div class="outline-text-2" id="text-org4e00d57">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                  entry
+                  (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                  <span style="color: #008000;">"* %?"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org30b76d2" class="outline-2">
+<h2 id="org30b76d2">Capture una nota</h2>
+<div class="outline-text-2" id="text-org30b76d2">
+<div class="org-src-container">
+<pre class="src src-emacs-command">M-x org-capture
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3adafb5" class="outline-2">
+<h2 id="org3adafb5">Visitar el archivo de notas por nombre del archivo</h2>
+<div class="outline-text-2" id="text-org3adafb5">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(find-file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org50b5ac3" class="outline-2">
+<h2 id="org50b5ac3">Visitar el archivo de notas por letra</h2>
+<div class="outline-text-2" id="text-org50b5ac3">
 <p>
-<a href="./about.html">Acepto</a> correciones en mi uso de español.<br />
+Código elisp para ir al archivo asociado con una plantilla con la<br />
+letra e<br />
 </p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(org-capture-goto-target <span style="color: #008000;">"e"</span>)
+</pre>
+</div>
+
+<p>
+nota: Cuando se usa funciones de org-capture, en vez de comandos, la<br />
+libraría no se carga automáticamente. Tienes que hacerlo manualmente.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">require</span> '<span style="color: #D0372D;">org-capture</span>)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga13f93f" class="outline-2">
+<h2 id="orga13f93f">Añadir un org capture por letra directamente</h2>
+<div class="outline-text-2" id="text-orga13f93f">
+<p>
+Código elisp para activar org-capture por plantilla con letra e.<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">defun</span> <span style="color: #006699;">org-capture-e-ncte</span> ()
+  <span style="color: #036A07;">"Captura de org por plantilla e"</span>
+  (<span style="color: #0000FF; font-weight: bold;">interactive</span>)
+  (org-capture nil <span style="color: #008000;">"e"</span>))
+</pre>
+</div>
+
+<p>
+Invocarlo directamente<br />
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">M-x org-capture-e-ncte
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc84a0aa" class="outline-2">
+<h2 id="orgc84a0aa">Añade un TODO al enacabezado</h2>
+<div class="outline-text-2" id="text-orgc84a0aa">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                  entry
+                  (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                  <span style="color: #008000;">"* TODO %?"</span>)))))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org19bedfa" class="outline-2">
+<h2 id="org19bedfa">Añade la fecha actual a la entrada</h2>
+<div class="outline-text-2" id="text-org19bedfa">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                  entry
+                  (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                  <span style="color: #008000;">"* TODO %? %u"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7be6173" class="outline-2">
+<h2 id="org7be6173">Añade la fecha en un cajón de propiedades</h2>
+<div class="outline-text-2" id="text-org7be6173">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                  entry
+                  (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                  <span style="color: #008000;">"* TODO %? \n:PROPERTIES:\n:CREATED: %u\n:END:"</span>))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6056abe" class="outline-2">
+<h2 id="org6056abe">Anteponer la entrada al inicio del archivo</h2>
+<div class="outline-text-2" id="text-org6056abe">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                entry
+                (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                <span style="color: #008000;">"* TODO %? \n:PROPERTIES:\n:CREATED: %u\n:END:"</span>
+                <span style="color: #006FE0;">:prepend</span> t))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org812e600" class="outline-2">
+<h2 id="org812e600">Abre org-mode con las entradas cerradas</h2>
+<div class="outline-text-2" id="text-org812e600">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-startup-folded t)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org687cdf0" class="outline-2">
+<h2 id="org687cdf0">Copiar la region elegida a la captura</h2>
+<div class="outline-text-2" id="text-org687cdf0">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">setq</span> org-capture-templates
+        '((<span style="color: #008000;">"e"</span> . (<span style="color: #008000;">"Yak Shaving en Emacs"</span>
+                entry
+                (file <span style="color: #008000;">"~/tmp/yak-shaving.org"</span>)
+                <span style="color: #008000;">"* TODO %? \n:PROPERTIES:\n:CREATED: %u\n:END:\n\n%i"</span>
+                <span style="color: #006FE0;">:prepend</span> t))))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org99afca9" class="outline-2">
+<h2 id="org99afca9">Ańade un enlace a la ubicación actual</h2>
+<div class="outline-text-2" id="text-org99afca9">
+<div class="org-src-container">
+<pre class="src src-:results">%a
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -386,7 +458,7 @@ archivos no. Usa este commando para forzar una actualización<br />
 updated on
 <span class="file_modified_date">23 03 2025</span>
 at
-<span class="file_modified_time">11:21:47</span>
+<span class="file_modified_time">09:21:27</span>
 .
 </div>
 </div>

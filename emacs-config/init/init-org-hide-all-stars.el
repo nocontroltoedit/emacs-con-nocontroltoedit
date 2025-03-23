@@ -23,4 +23,4 @@
 ;;          (org-hide-leading-stars--update-headings t))
 ;;         (t (org-hide-leading-stars--update-headings nil))))
 
-;; (provide 'org-hide-leading-stars)
+(provide 'init-org-hide-all-stars)

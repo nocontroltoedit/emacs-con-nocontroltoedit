@@ -214,23 +214,89 @@
 </nav>
 </div>
 <div id="content" class="content">
-<div id="outline-container-org317af87" class="outline-2">
-<h2 id="org317af87">Acerca de</h2>
-<div class="outline-text-2" id="text-org317af87">
+<div id="outline-container-orgdef6b87" class="outline-2">
+<h2 id="orgdef6b87">doom evil bindings</h2>
+<div class="outline-text-2" id="text-orgdef6b87">
 <p>
-Hola, Soy <b>no-control-to-edit</b>.<br />
+<a href="https://github.com/doomemacs/doomemacs/blob/master/modules/editor/evil/config.el">evil doom setup</a><br />
+</p>
+</div>
+</div>
+<div id="outline-container-orgf28ae71" class="outline-2">
+<h2 id="orgf28ae71">text objects</h2>
+<div class="outline-text-2" id="text-orgf28ae71">
+<p>
+targets.el<br />
+<a href="https://github.com/noctuid/targets.el">https://github.com/noctuid/targets.el</a><br />
 </p>
 
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #0000FF; font-weight: bold;">use-package</span> evil-textobj-anyblock
+<span style="color: #006FE0;">:defer</span> t
+<span style="color: #006FE0;">:config</span>
+(<span style="color: #0000FF; font-weight: bold;">setq</span> evil-textobj-anyblock-blocks
+      '((<span style="color: #008000;">"("</span> . <span style="color: #008000;">")"</span>)
+        (<span style="color: #008000;">"{"</span> . <span style="color: #008000;">"}"</span>)
+        (<span style="color: #008000;">"\\["</span> . <span style="color: #008000;">"\\]"</span>)
+        (<span style="color: #008000;">"&lt;"</span> . <span style="color: #008000;">"&gt;"</span>))))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-key evil-inner-text-objects-map <span style="color: #008000;">"b"</span> 'evil-textobj-anyblock-inner-block)
+(define-key evil-outer-text-objects-map <span style="color: #008000;">"b"</span> 'evil-textobj-anyblock-a-block)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-key evil-motion-state-map <span style="color: #008000;">"b"</span> 'evil-textobj-anyblock-forward-open-block-start)
+</pre>
+</div>
 
 <p>
-Aprendo español y he creado este sitio para practicar creando<br />
-contenido en este idioma. Voy a enfocarme en el tema de Emacs, mi<br />
-editor favorito.<br />
+github <a href="https://github.com/noctuid/evil-textobj-anyblock?tab=readme-ov-file">evil-textobj-anyblock.el</a><br />
 </p>
 
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  (<span style="color: #0000FF; font-weight: bold;">evil-define-text-object</span> <span style="color: #006699;">my-evil-textobj-anyblock-inner-quote</span>
+  (count <span style="color: #6434A3;">&amp;optional</span> beg end type)
+  <span style="color: #036A07;">"Select the closest outer quote."</span>
+  (<span style="color: #0000FF; font-weight: bold;">let</span> ((evil-textobj-anyblock-blocks
+         '((<span style="color: #008000;">"'"</span> . <span style="color: #008000;">"'"</span>)
+           (<span style="color: #008000;">"\""</span> . <span style="color: #008000;">"\""</span>)
+           (<span style="color: #008000;">"`"</span> . <span style="color: #008000;">"'"</span>)
+           (<span style="color: #008000;">"&#8220;"</span> . <span style="color: #008000;">"&#8221;"</span>))))
+    (evil-textobj-anyblock--make-textobj beg end type count nil)))
 
+(<span style="color: #0000FF; font-weight: bold;">evil-define-text-object</span> <span style="color: #006699;">my-evil-textobj-anyblock-a-quote</span>
+  (count <span style="color: #6434A3;">&amp;optional</span> beg end type)
+  <span style="color: #036A07;">"Select the closest outer quote."</span>
+  (<span style="color: #0000FF; font-weight: bold;">let</span> ((evil-textobj-anyblock-blocks
+         '((<span style="color: #008000;">"'"</span> . <span style="color: #008000;">"'"</span>)
+           (<span style="color: #008000;">"\""</span> . <span style="color: #008000;">"\""</span>)
+           (<span style="color: #008000;">"`"</span> . <span style="color: #008000;">"'"</span>)
+           (<span style="color: #008000;">"&#8220;"</span> . <span style="color: #008000;">"&#8221;"</span>))))
+    (evil-textobj-anyblock--make-textobj beg end type count t)))
+
+(define-key evil-inner-text-objects-map <span style="color: #008000;">"q"</span> 'my-evil-textobj-anyblock-inner-quote)
+(define-key evil-outer-text-objects-map <span style="color: #008000;">"q"</span> 'my-evil-textobj-anyblock-a-quote)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9fdcaf4" class="outline-2">
+<h2 id="org9fdcaf4">Cómo la gente usa evil?</h2>
+<div class="outline-text-2" id="text-org9fdcaf4">
 <p>
-<a href="https://github.com/nocontroltoedit/emacs-con-nocontroltoedit/tree/main">github: emacs-con-nocontroltoedit</a><br />
+<a href="https://github.com/jbranso/.emacs.d/blob/master/lisp/init-evil.el">https://github.com/jbranso/.emacs.d/blob/master/lisp/init-evil.el</a><br />
+</p>
+</div>
+</div>
+<div id="outline-container-org5846d9a" class="outline-2">
+<h2 id="org5846d9a">Investigar como otros usarios usan evil</h2>
+<div class="outline-text-2" id="text-org5846d9a">
+<p>
+Voy a mirar <a href="https://blog.aaronbieber.com/2016/01/23/living-in-evil.html">Viviendo en emacs (EN) por Aaron Bieber</a> cuando tengo tiempo.<br />
 </p>
 </div>
 </div>
@@ -238,9 +304,9 @@ editor favorito.<br />
 <div id="postamble" class="status">
 <div id="modified-at" class="content">
 updated on
-<span class="file_modified_date">17 03 2025</span>
+<span class="file_modified_date">23 03 2025</span>
 at
-<span class="file_modified_time">11:10:45</span>
+<span class="file_modified_time">00:48:30</span>
 .
 </div>
 </div>

@@ -1,20 +1,49 @@
+* Org-capture
+
+  [[https://youtu.be/9z0-sZzXKDw?si=llRxmRIxOi0VOpbF][youtube - org-capture de emacs en español]]
+
 * Emacs - No hay función borrar-este-archivo
 
   Es mejor usar dired para:
-    - borrar-este-archivo
-    - renombrar-este-archivo
-    - copiar-este-archivo
+    - borrar archivo actual
+    - renombrar archivo actual
+    - copiar archivo actual
 
-  C-x C-j  Abre editor de directorios y archivos  (dired-jump)
-  R - renombrar archivo  (dired-do-rename)
-  > nombre-nuevo
+  Ejemplo de renombrar archivo usando dired   
+
+#+begin_quote 
+  ;; Abrir el editor de directorios y archivos   (dired-jump)
+  C-x C-j
+
+  ;; Renombrar el archivo bajo cursor            (dired-do-rename)
+  R
+  
+  ;; Entra un nobmre nuevo
+
+  ;; Aceptar los cambios
   RET
-  q - escapar dired  (quit-window)
 
-  Aunque mi modo favorito es
+  ;; Cerrar el editor de directorios y archivos   (quit-window)
+  q
+#+end_quote
 
-  C-x C-j (dired-jump)
+    Aunque mi modo favorito es
+
+ #+begin_quote
+  ;; Saltar a dired, con el foco en el archivo actual
+  C-x C-j                              (dired-jump)
+
+  ;; Hacer dired editable 
   M-x wdired-change-to-wdired-mode
+
+  ;; editar dired como era un archivo de texto
+  
+  ;; Confirmar los cambios y salir
+  C-c C-c                              (wdired-finish-edit)
+
+  ;; Deshacer los cambios y salir
+  C-c C-k                              (wdired-abort-changes)
+ #+end_quote
   
 * Voy a usar evil
 

@@ -32,6 +32,13 @@
 
 (use-package init-utils
   :ensure nil)
+(use-package init-org-hide-all-stars
+  :ensure nil)
+
+(use-package org
+   :ensure nil
+   :config
+   (setq org-confirm-babel-evaluate nil))
 
 (use-package org-present
   :config
@@ -40,31 +47,36 @@
       (with-current-buffer buf
     (setq header-line-format "  org-capture")
     (setq mode-line-format "")
-  (setq org-present-text-scale 1.3)
+    (setq frame-title-format "")   
+    (scroll-bar-mode -1)
+    (menu-bar-mode -1)
+    
+  ;; (save-excursion
+  ;;   (goto-char (point-min))
+  ;;  ;; (delete-blank-lines)
+  ;; (newline 2)
+  ;; (goto-char (point-max))
+  ;; ;; (delete-blank-lines)
+  ;; (newline))
+    (setq org-present-text-scale 1.3)
   (setq org-present-hide-stars-in-headings t)
   (setq org-hide-leading-stars t)
+  (ignore-errors
   (set-face-attribute 'header-line
 		      nil
 		    :background nil
 		    :weight 'bold
-		    :height 500)
+		    :height 300)
   (set-face-attribute 'mode-line
 		      nil
 		    :background nil
 		    :weight 'bold
-		    :height 200)
-  
+		    :height 200))
+  (org-present-big)
   ;; M-x set-fringe-style 'no-fringes
   (set-window-margins nil 5 5)
-  (save-excursion
-    (goto-char (point-min))
-   ;; (delete-blank-lines)
-  (newline 2)
-  (goto-char (point-max))
-  ;; (delete-blank-lines)
-  (newline))
   ;; theme wombat
-  ;; (org-hide-all-stars-ncte)
+   (org-hide-all-stars-ncte)
 ;;   (font-lock-add-keywords
 ;;              nil
 ;;              '(("^[[:space:]]*#\\+.*$" . 'org-src-meta-face)))
@@ -76,22 +88,27 @@
   ;;    nil
   ;;    '(("^[*]+[[:space:]]" . 'org-src-meta-face)))
   ;; (font-lock-fontify-buffer)
-)))
+   ;; (turn-off-evil-mode)
+   (ignore-errors
+  (re-search-forward "[[:alnum:]]" nil t)
+  ;; (backward-char 1)
+  (forward-line 1))
   
-  (add-to-list 'org-present-after-navigate-functions #'my-org-present)
-  )
-
- (set-face-attribute 'org-meta-line nil
- 		    :foreground "black"
- 		    :background nil
- 		    :height 1
- 		    :slant 'normal)
-
+  
 (set-face-attribute 'org-meta-line nil
  		    :foreground "grey"
  		    :background nil
  		    :height 200
  		    :slant 'normal)
+ (set-face-attribute 'org-meta-line nil
+ 		    :foreground "black"
+ 		    :background nil
+ 		    :height 1
+ 		    :slant 'normal)
+)))
+  (add-to-list 'org-present-after-navigate-functions #'my-org-present)
+  )
+
 
 ;; Define a custom face to hide the metadata of source code blocks
 ;; (defface org-src-meta-face
