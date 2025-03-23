@@ -1,51 +1,63 @@
 #title: Org Capture Presentation
 
-* Sobre org capture
 
-Provee una manera de grabar una nota con la mínima interrupción de
-flujo.
 
-Lo uso para notar cosas que me gustaría mejorar en emacs, pero no puedo
-hacerlo en ese momento.
 
-* org-capture.el libraría
+emacs: 31.0.50
+os: Linux Mint Debian Edition 6.1
+fecha: 23 March 2025
+author: no-control-to-edit
 
-  Cargar la libraría org capture 
 
-#+begin_src emacs-lisp :results silent 
-  (require 'org-capture)
-#+end_src
+
+* Capturar una nota rápidamente
+
+Esta libraria provee una manera de grabar una nota, con la mínima
+interrupción del flujo.
+
+Lo uso para notar cosas que me gustaría mejorar en emacs, cuando no
+puedo hacerlo en el momento.
 
 * Configurar una plantilla de captura (template)
 
-  Solo tienes que añadir el siguiente info
+  Para cada tipo de captura tienes que crear una plantilla que
+  contiene la siguiente infomación.
 
    1. Una descripción de la plantilla
    2. Tipo de entrada
-      'entry' es un titualar de org-mode
-   3. Datos usado al ubicarlo en el archivo
+      'entry' crea un heading (titualar) de org-mode
+   3. Datos usado para ubicar la entrada
    4. Cadena de formato por la entrada
 
    Manual de plantillas - Las varias opciones
    https://orgmode.org/manual/Template-elements.html
 
-* Ejemplo de datos de plantilla
+* Ejemplo de una plantilla
    
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp  :results silent
        ("Yak Shaving en Emacs"
 	entry
 	(file "~/tmp/yak-shaving.org")
 	"* %?")
-#+end_src* Asignarlo a una letra
+#+end_src
+
+* Asociar plantilla con una letra
+
+#+begin_src emacs-lisp :results silent
+  ("e" . ("Yak Shaving en Emacs"
+  	entry
+  	(file "~/tmp/yak-shaving.org")
+  	"* %?"))
+#+end_src
 
 * Ańadir la plantilla a la lista de plantillas
 
 #+begin_src emacs-lisp :results silent
-  (setq org-capture-templates
-	'(("e" . ("Yak Shaving en Emacs"
-		  entry
-		  (file "~/tmp/yak-shaving.org")
-		  "* %?"))))
+    (setq org-capture-templates
+  	'(("e" . ("Yak Shaving en Emacs"
+  		  entry
+  		  (file "~/tmp/yak-shaving.org")
+  		  "* %?"))))
 #+end_src
 
 * Capture una nota
@@ -62,11 +74,23 @@ hacerlo en ese momento.
 
 * Visitar el archivo de notas por letra
 
-#+begin_src emacs-lisp
+Código elisp para ir al archivo asociado con una plantilla con la
+letra e
+
+#+begin_src emacs-lisp  :results silent
 (org-capture-goto-target "e")
 #+end_src
 
+nota: Cuando se usa funciones de org-capture, en vez de comandos, la
+libraría no se carga automáticamente. Tienes que hacerlo manualmente.
+
+#+begin_src emacs-lisp :results silent 
+  (require 'org-capture)
+#+end_src
+
 * Añadir un org capture por letra directamente
+
+Código elisp para activar org-capture por plantilla con letra e.
 
 #+begin_src emacs-lisp :results silent
   (defun org-capture-e-ncte ()
@@ -74,6 +98,8 @@ hacerlo en ese momento.
     (interactive)
     (org-capture nil "e"))
 #+end_src
+
+Invocarlo directamente
 
 #+begin_src emacs-lisp :results silent
   M-x org-capture-e-ncte
@@ -89,7 +115,7 @@ hacerlo en ese momento.
 		  "* TODO %?")))))))
 #+end_src
 
-* Añade la fecha
+* Añade la fecha actual a la entrada
 
 #+begin_src emacs-lisp :results silent
   (setq org-capture-templates
@@ -97,8 +123,7 @@ hacerlo en ese momento.
 		  entry
 		  (file "~/tmp/yak-shaving.org")
 		  "* TODO %? %u"))))
-
-		  #+end_src
+#+end_src
 
 * Añade la fecha en un cajón de propiedades
 
@@ -140,15 +165,9 @@ hacerlo en ese momento.
 
 * Ańade un enlace a la ubicación actual
 
-#+begin_src
+#+begin_src :results silent 
     %a
 #+end_src
 
-* About
 
-org-cature: built-in
-emacs: 31.0.50
-os: Linux Mint Debian Edition 6.1
-fecha: 23 March 2025
-author: no-control-to-edit
 
