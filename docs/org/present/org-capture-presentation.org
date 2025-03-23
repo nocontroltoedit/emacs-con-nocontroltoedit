@@ -8,12 +8,13 @@ flujo.
 Lo uso para notar cosas que me gustaría mejorar en emacs, pero no puedo
 hacerlo en ese momento.
 
+* org-capture.el libraría
 
-org-cature: built-in
-emacs: 31.0.50
-os: Linux Mint Debian Edition 6.1
-fecha: 23 March 2025
-author: no-control-to-edit
+  Cargar la libraría org capture 
+
+#+begin_src emacs-lisp :results silent 
+  (require 'org-capture)
+#+end_src
 
 * Configurar una plantilla de captura (template)
 
@@ -24,7 +25,6 @@ author: no-control-to-edit
       'entry' es un titualar de org-mode
    3. Datos usado al ubicarlo en el archivo
    4. Cadena de formato por la entrada
-
 
    Manual de plantillas - Las varias opciones
    https://orgmode.org/manual/Template-elements.html
@@ -121,7 +121,6 @@ author: no-control-to-edit
 		:prepend t))))
 #+end_src
 
-
 * Abre org-mode con las entradas cerradas
 
 #+begin_src emacs-lisp :results silent
@@ -144,3 +143,12 @@ author: no-control-to-edit
 #+begin_src
     %a
 #+end_src
+
+* About
+
+org-cature: built-in
+emacs: 31.0.50
+os: Linux Mint Debian Edition 6.1
+fecha: 23 March 2025
+author: no-control-to-edit
+
