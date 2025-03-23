@@ -36,6 +36,10 @@ h1 {
     padding-bottom: 1em;
 }
 
+ul {
+    margin-left: 2em;
+}
+
 #preamble {
     margin: auto;
     max-width: 60em;
